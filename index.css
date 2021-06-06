@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+::-webkit-scrollbar {
+    width: 7px
+}
+
+::-webkit-scrollbar-track {
+    background: #303235
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4f555e;
+    border-radius: 15px
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #474a52
+}
+
+body {
+    background-color: #201f1f;
+    font-family: 'Fira Code', monospace;
+    font-size: 13px;
+    color: #ffea67;
+    white-space: break-spaces;
+    line-height: 2;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+a, a:hover, a:active, a:visited {
+    color: #ffea67
+}
+
+comment, comment:before {
+    color: #989595;
+    content: "// ";
+}
+
+img {
+    margin-top: 20px;
+    margin-right: 30px;
+}
+
+#mobileInfo {
+    display: none;
+}
+
+#showMore, #showMore:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#other {
+    display: none;
+}
+
+#other.show {
+    display: block;
+}
+
+.spotify {
+    position: relative; width: 530px; right: 10px;
+}
+
+@media only screen and (max-width: 800px) {
+    body {
+        line-height: 3;
+        white-space: pre-line;
+    }
+
+    #mobileInfo {
+        display: block;
+        text-align: center;
+    }
+
+    .spotify {
+        width: 90vw;
+    }
+
+    .otherItem {
+        width: 90vw;
+    }
+}

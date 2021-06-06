@@ -1,1 +1,41 @@
-...
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pazdikan.party">
+    <meta property="og:title" content="Pazdikan's website">
+    <meta property="og:description" content="About me and unnecessary things lmao.">
+    <meta property="og:image" content="https://cdn.discordapp.com/icons/810605042481496105/b679012a817f5612f687a4b2f9987d1e.png">
+    <meta name="theme-color" content="#ffea67">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://cdn.discordapp.com/icons/810605042481496105/b679012a817f5612f687a4b2f9987d1e.png">
+    <link rel="stylesheet" href="index.css">
+    <title>Pazdikan's website</title>
+<body>
+<comment id="mobileInfo">This website isn't made for mobile, that's why the javascript styled about me is weird. I tried my best to make it readable.</comment>
+    module.exports = pazdikan = {
+        name: "Michał",
+        age: 15,
+        country: "Poland",
+        about_me: "I'm shy, I love programming and I don't have friends because nobody likes me.",
+        languages: [ "javascript", "typescript", "html", "css", "python" ],
+        im_using: [ "windows", "ubuntu server", "virtualbox", "intellij", "webstorm" ],
+        released_projects: [
+            {
+                name: "Pazdikan's RPC",
+                description: "A cool app for Discord rich presences.",
+                url: "<a href="https://pazdikan.party/rpc">pazdikan.party/rpc</a>"
+            }
+        ],
+        socials: [ "<a href="https://www.youtube.com/channel/UCK08eZq3IsbAbzF0T6bs6xg">youtube</a>", "<a href="https://discord.gg/dXjUapMtsy">discord</a>", "<a href="https://twitter.com/pazdikan">twitter</a>", "<a href="https://github.com/pazdikan">github</a>" ],
+        show_more: <a id="showMore" onclick="document.getElementById('other').classList.toggle('show'); if (document.getElementById('other').classList.contains('show')) document.getElementById('showMore').innerText = 'true'; else document.getElementById('showMore').innerText = 'false'">false</a> <comment>CLICK ME!</comment>
+    }
+    <div id="other">
+        <img class="otherItem" src="https://github-readme-stats.vercel.app/api?username=pazdikan&amp;count_private=true&amp;show_icons=true&amp;theme=great-gatsby" alt="Anurag&#39;s GitHub stats">
+        <img class="otherItem" src="https://github-readme-stats.vercel.app/api/wakatime?username=pazdikan&amp;layout=compact&amp;theme=great-gatsby" alt="willianrod&#39;s wakatime stats">
+        <a href="https://spotify-github-profile.vercel.app/api/view?uid=7u1ityx4k5dpz30f4mgaxnwnj&amp;redirect=true"><img class="spotify" src="https://spotify-github-profile.vercel.app/api/view?uid=7u1ityx4k5dpz30f4mgaxnwnj&amp;cover_image=true&amp;theme=novatorem" alt="spotify-github-profile"></a>
+    </div>
+</body>
+</html>
