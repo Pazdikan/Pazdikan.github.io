@@ -114,3 +114,9 @@ a {
     85% {top: -2px}
     100% {top: 0}
 }
+
+@media only screen and (max-width: 768px) {
+    .spotify {
+        width: 100%;
+    }
+}
