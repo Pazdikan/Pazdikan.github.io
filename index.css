@@ -21,9 +21,7 @@ body {
     background-color: #201f1f;
     font-family: 'Fira Code', monospace;
     font-size: 13px;
-    color: #ffea67;
-    white-space: break-spaces;
-    line-height: 2;
+    color: #fff;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -32,57 +30,87 @@ body {
     user-select: none;
 }
 
-a, a:hover, a:active, a:visited {
-    color: #ffea67
-}
-
-comment, comment:before {
-    color: #989595;
-    content: "// ";
-}
-
-img {
-    margin-top: 20px;
-    margin-right: 30px;
-}
-
-#mobileInfo {
-    display: none;
-}
-
-#showMore, #showMore:hover {
-    text-decoration: underline;
+a {
     cursor: pointer;
+    font-size: 15px;
 }
 
-#other {
+.pazdikan-tab {
     display: none;
+    opacity: 0;
+    position: relative;
+    width: 80%;
+    margin: 25px auto;
 }
 
-#other.show {
+.pazdikan-active {
     display: block;
+    -webkit-animation: tab-fadein 1s forwards .5s;
+    animation: tab-fadein 1s forwards .5s;
+}
+
+.aboutme {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.aboutme-title {
+    font-size: 30px;
+}
+
+.aboutme-text {
+    margin: 20px;
+    width: fit-content;
+    text-align: justify;
+}
+
+.navbar {
+    -webkit-animation: navbar-slidein 1s forwards;
+    animation: navbar-slidein 1s forwards;
+}
+
+.titleHeart {
+    position: relative;
+    -webkit-animation: heartHover 1s infinite;
+    animation: heartHover 1s infinite;
 }
 
 .spotify {
-    position: relative; width: 530px; right: 10px;
+    width: 80%;
 }
 
-@media only screen and (max-width: 800px) {
-    body {
-        line-height: 3;
-        white-space: pre-line;
+.navbar-nav > li > .dropdown-menu { background-color: #4a24d7; }
+.navbar-nav > li > .dropdown-menu a:hover { background-color: #4827cb; }
+.navbar-nav > li > .dropdown-menu a{   color: #fff;  }
+
+@keyframes navbar-slidein {
+    from {
+        margin-top: -75px;
     }
 
-    #mobileInfo {
-        display: block;
-        text-align: center;
+    to {
+        margin-top: 0%;
+    }
+}
+
+@keyframes tab-fadein {
+    from {
+        opacity: 0;
     }
 
-    .spotify {
-        width: 90vw;
+    to {
+        opacity: 100%;
     }
+}
 
-    .otherItem {
-        width: 90vw;
-    }
+@keyframes heartHover {
+    0% {top: 0}
+    15% {top: -2px}
+    20% {top: -3px}
+    25% {top: -6px}
+    75% {top: -6px}
+    80% {top: -3px}
+    85% {top: -2px}
+    100% {top: 0}
 }

@@ -7,35 +7,97 @@
     <meta property="og:url" content="https://pazdikan.party">
     <meta property="og:title" content="Pazdikan's website">
     <meta property="og:description" content="About me and unnecessary things lmao.">
-    <meta property="og:image" content="https://cdn.discordapp.com/icons/810605042481496105/b679012a817f5612f687a4b2f9987d1e.png">
+    <meta property="og:image"
+          content="https://cdn.discordapp.com/icons/810605042481496105/b679012a817f5612f687a4b2f9987d1e.png">
     <meta name="theme-color" content="#ffea67">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://cdn.discordapp.com/icons/810605042481496105/b679012a817f5612f687a4b2f9987d1e.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="index.css">
-    <title>Pazdikan's website</title>
+    <script
+            src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js">
+    </script>
+    <link
+            rel="stylesheet"
+            href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"
+    />
+    <title>pazdikan.party › home page</title>
 <body>
-<comment id="mobileInfo">This website isn't made for mobile, that's why the javascript styled about me is weird. I tried my best to make it readable.</comment>
-    module.exports = pazdikan = {
-        name: "Michał",
-        age: 15,
-        country: "Poland",
-        about_me: "I'm shy, I love programming and I don't have friends because nobody likes me.",
-        languages: [ "javascript", "typescript", "html", "css", "python" ],
-        im_using: [ "windows", "ubuntu server", "virtualbox", "intellij", "webstorm" ],
-        released_projects: [
-            {
-                name: "Pazdikan's RPC",
-                description: "A cool app for Discord rich presences.",
-                url: "<a href="https://pazdikan.party/rpc">pazdikan.party/rpc</a>"
-            }
-        ],
-        socials: [ "<a href="https://www.youtube.com/channel/UCK08eZq3IsbAbzF0T6bs6xg">youtube</a>", "<a href="https://discord.gg/dXjUapMtsy">discord</a>", "<a href="https://twitter.com/pazdikan">twitter</a>", "<a href="https://github.com/pazdikan">github</a>" ],
-        show_more: <a id="showMore" onclick="document.getElementById('other').classList.toggle('show'); if (document.getElementById('other').classList.contains('show')) document.getElementById('showMore').innerText = 'true'; else document.getElementById('showMore').innerText = 'false'">false</a> <comment>CLICK ME!</comment>
-    }
-    <div id="other">
-        <img class="otherItem" src="https://github-readme-stats.vercel.app/api?username=pazdikan&amp;count_private=true&amp;show_icons=true&amp;theme=great-gatsby" alt="Anurag&#39;s GitHub stats">
-        <img class="otherItem" src="https://github-readme-stats.vercel.app/api/wakatime?username=pazdikan&amp;layout=compact&amp;theme=great-gatsby" alt="willianrod&#39;s wakatime stats">
-        <a href="https://spotify-github-profile.vercel.app/api/view?uid=7u1ityx4k5dpz30f4mgaxnwnj&amp;redirect=true"><img class="spotify" src="https://spotify-github-profile.vercel.app/api/view?uid=7u1ityx4k5dpz30f4mgaxnwnj&amp;cover_image=true&amp;theme=novatorem" alt="spotify-github-profile"></a>
+
+
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #5e33ff;">
+    <a class="navbar-brand" href="#">pazdikan.party <span class="titleHeart">❤</span></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown active">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Socials</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="https://discord.gg/dXjUapMtsy" target="_blank">Discord</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="https://youtube.com/pazdikan" target="_blank">Youtube</a>
+                    <a class="dropdown-item" href="https://twitch.tv/pazdikan" target="_blank">Twitch</a>
+                    <a class="dropdown-item" href="https://twitter.com/pazdikan" target="_blank">Twitter</a>
+                    <a class="dropdown-item" href="https://github.com/pazdikan" target="_blank">Github</a>
+                </div>
+            <li class="nav-item active"><a class="nav-link" onclick="changeTab('activity')">Activity</a></li>
+            <li class="nav-item active"><a class="nav-link" onclick="changeTab('home')">Home</a></li>
+        </ul>
     </div>
+</nav>
+
+<div class="pazdikan-homeTab pazdikan-tab pazdikan-active">
+    <div class="aboutme">
+        <p class="aboutme-text"><span class="aboutme-title">About me</span><br>
+            Hi there! I'm Michał, some random Polish kid :D. I love programming and learning new things.
+            Currently, I'm working on the minecraft plugins series (e.g. top, new, trending, news, how to configure them, etc.).<br><br>
+            Some random facts about me: I'm shy, I'm sometimes (always) stupid, I started around 10000000000 projects and I'll never finish them lmao.
+        </p>
+    </div>
+</div>
+
+<div class="pazdikan-activityTab pazdikan-tab">
+    <div class="calendar">
+    </div>
+    <p align="center"><a href="https://spotify-github-profile.vercel.app/api/view?uid=7u1ityx4k5dpz30f4mgaxnwnj&amp;redirect=true" class="spotify-text"><img class="load-delay spotify" src="https://c.tenor.com/I6kN-6X7nhAAAAAj/loading-buffering.gif" data-original="https://spotify-github-profile.vercel.app/api/view?uid=7u1ityx4k5dpz30f4mgaxnwnj&amp;cover_image=true&amp;theme=novatorem" /></a></p>
+
+</div>
+
+
+<!--<comment id="mobileInfo">This website isn't made for mobile, that's why the javascript styled about me is weird. I tried my best to make it readable.</comment>-->
+<!--    module.exports = pazdikan = {-->
+<!--        name: "Michał",-->
+<!--        age: 15,-->
+<!--        country: "Poland",-->
+<!--        about_me: "I'm shy, I love programming and I don't have friends because nobody likes me.",-->
+<!--        languages: [ "javascript", "typescript", "html", "css", "python" ],-->
+<!--        im_using: [ "windows", "ubuntu server", "virtualbox", "intellij", "webstorm" ],-->
+<!--        released_projects: [-->
+<!--            {-->
+<!--                name: "Pazdikan's RPC",-->
+<!--                description: "A cool app for Discord rich presences.",-->
+<!--                url: "<a href="https://pazdikan.party/rpc">pazdikan.party/rpc</a>"-->
+<!--            }-->
+<!--        ],-->
+<!--        socials: [ "<a href="https://www.youtube.com/channel/UCK08eZq3IsbAbzF0T6bs6xg">youtube</a>", "<a href="https://discord.gg/dXjUapMtsy">discord</a>", "<a href="https://twitter.com/pazdikan">twitter</a>", "<a href="https://github.com/pazdikan">github</a>" ],-->
+<!--        show_more: <a id="showMore" onclick="document.getElementById('other').classList.toggle('show'); if (document.getElementById('other').classList.contains('show')) document.getElementById('showMore').innerText = 'true'; else document.getElementById('showMore').innerText = 'false'">false</a> <comment>CLICK ME!</comment>-->
+<!--    }-->
+<!--    <div id="other">-->
+<!--        <img class="otherItem" src="https://github-readme-stats.vercel.app/api?username=pazdikan&amp;count_private=true&amp;show_icons=true&amp;theme=great-gatsby" alt="Anurag&#39;s GitHub stats">-->
+<!--        <img class="otherItem" src="https://github-readme-stats.vercel.app/api/wakatime?username=pazdikan&amp;layout=compact&amp;theme=great-gatsby" alt="willianrod&#39;s wakatime stats">-->
+<!--        <a href="https://spotify-github-profile.vercel.app/api/view?uid=7u1ityx4k5dpz30f4mgaxnwnj&amp;redirect=true"><img class="spotify" src="https://spotify-github-profile.vercel.app/api/view?uid=7u1ityx4k5dpz30f4mgaxnwnj&amp;cover_image=true&amp;theme=novatorem" alt="spotify-github-profile"></a>-->
+<!--    </div>-->
 </body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+<script src="index.js"></script>
 </html>
