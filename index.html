@@ -42,6 +42,7 @@
                     <a class="dropdown-item" href="https://twitter.com/pazdikan" target="_blank">Twitter</a>
                     <a class="dropdown-item" href="https://github.com/pazdikan" target="_blank">Github</a>
                 </div>
+<!--            <li class="nav-item active"><a class="nav-link" onclick="changeTab('videos')">Videos</a></li>-->
             <li class="nav-item active"><a class="nav-link" onclick="changeTab('activity')">Activity</a></li>
             <li class="nav-item active"><a class="nav-link" onclick="changeTab('home')">Home</a></li>
         </ul>
@@ -59,13 +60,19 @@
 </div>
 
 <div class="pazdikan-activityTab pazdikan-tab">
-    <div class="calendar">
-    </div>
+    <p class="activity-title">Github commits</p>
+    <div class="calendar"></div>
+    <p class="activity-title">Spotify recently played</p>
     <p align="center"><a href="https://spotify-github-profile.vercel.app/api/view?uid=7u1ityx4k5dpz30f4mgaxnwnj&amp;redirect=true" class="spotify-text"><img class="load-delay spotify" src="https://c.tenor.com/I6kN-6X7nhAAAAAj/loading-buffering.gif" data-original="https://spotify-github-profile.vercel.app/api/view?uid=7u1ityx4k5dpz30f4mgaxnwnj&amp;cover_image=true&amp;theme=novatorem" /></a></p>
+    <p class="activity-title">Recent YouTube video</p>
+    <p align="center" class="embedVideoP"><iframe class="latestVideoEmbed" vnum='0' cid="UCK08eZq3IsbAbzF0T6bs6xg" width="600" height="340" frameborder="0" allowfullscreen></iframe></p>
 </div>
+
+<!--<div class="pazdikan-videosTab pazdikan-tab">-->
+<!--    -->
+<!--</div>-->
 </body>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"
         crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
