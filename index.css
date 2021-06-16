@@ -119,4 +119,10 @@ a {
     .spotify {
         width: 100%;
     }
+
+    .aboutme {
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+    }
 }
