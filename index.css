@@ -28,7 +28,7 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    overflow-y: hidden;
+    overflow-z: hidden;
 }
 
 a {
@@ -56,12 +56,16 @@ a {
     margin: 0 auto;
 }
 
+.aboutme:not(:first-child) {
+    padding-top: 50px;
+}
+
 .aboutme-title {
     font-size: 30px;
 }
 
 .activity-title:not(:first-child) {
-    margin-top: 100px;
+    padding-top: 100px;
     font-size: 25px;
 }
 
@@ -88,6 +92,11 @@ a {
 
 .spotify {
     width: 80%;
+}
+
+.spotifyComment {
+    color: #4c9e48;
+    text-align: center;
 }
 
 .navbar-nav > li > .dropdown-menu { background-color: #4a24d7; }

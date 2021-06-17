@@ -27,7 +27,7 @@
 
 
 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #5e33ff;">
-    <a class="navbar-brand" href="#">pazdikan.party <span class="titleHeart">❤</span></a>
+    <a class="navbar-brand" href="#" onclick="changeTab('home')">pazdikan.party <a class="titleHeart" onclick="alert('you found a secret lmao')">❤</a></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -42,9 +42,7 @@
                     <a class="dropdown-item" href="https://twitter.com/pazdikan" target="_blank">Twitter</a>
                     <a class="dropdown-item" href="https://github.com/pazdikan" target="_blank">Github</a>
                 </div>
-<!--            <li class="nav-item active"><a class="nav-link" onclick="changeTab('videos')">Videos</a></li>-->
             <li class="nav-item active"><a class="nav-link" onclick="changeTab('activity')">Activity</a></li>
-            <li class="nav-item active"><a class="nav-link" onclick="changeTab('home')">Home</a></li>
         </ul>
     </div>
 </nav>
@@ -52,9 +50,25 @@
 <div class="pazdikan-homeTab pazdikan-tab pazdikan-active">
     <div class="aboutme">
         <p class="aboutme-text"><span class="aboutme-title">About me</span><br>
-            Hi there! I'm Michał, some random Polish kid :D. I love programming and learning new things.
-            Currently, I'm working on the minecraft plugins series (e.g. top, new, trending, news, how to configure them, etc.).<br><br>
+            Hi there! I'm Michał, some random Polish kid :D. I love programming and learning new things.<br><br>
             Some random facts about me: I'm shy, I'm sometimes (always) stupid, I started around 10000000000 projects and I'll never finish them lmao.
+        </p>
+    </div>
+    <div class="aboutme">
+        <p class="aboutme-text"><span class="aboutme-title">Skills</span><br>
+            These "things" cannot be called skills. I'm still learning a lot of stuff and I still don't know a lot of stuff.
+            Also I'm programming for myself so my code is ugly af.<br><br>
+            HTML/EJS/CSS -> for web dev lmao.<br>
+            Javascript -> for web dev and basic node.js apps.<br>
+            Typescript -> for node.js apps.<br>
+            Java -> for minecraft plugins (still learning).<br>
+            Python -> Umm, it's trash but I know it.
+        </p>
+    </div>
+    <div class="aboutme">
+        <p class="aboutme-text"><span class="aboutme-title">Current projects</span><br>
+            I'm working on a minecraft plugins/servers series (e.g. top, new, trending, news, how to configure them, etc.).
+            You can join my Discord server and give me some suggestions/ideas :D
         </p>
     </div>
 </div>
@@ -62,15 +76,13 @@
 <div class="pazdikan-activityTab pazdikan-tab">
     <p class="activity-title">Github commits</p>
     <div class="calendar"></div>
-    <p class="activity-title">Spotify recently played</p>
+    <p class="activity-title">Last played</p>
     <p align="center"><a href="https://spotify-github-profile.vercel.app/api/view?uid=7u1ityx4k5dpz30f4mgaxnwnj&amp;redirect=true" class="spotify-text"><img class="load-delay spotify" src="https://c.tenor.com/I6kN-6X7nhAAAAAj/loading-buffering.gif" data-original="https://spotify-github-profile.vercel.app/api/view?uid=7u1ityx4k5dpz30f4mgaxnwnj&amp;cover_image=true&amp;theme=novatorem" /></a></p>
+    <p class="spotifyComment">green = playing now</p>
     <p class="activity-title">Recent YouTube video</p>
     <p align="center" class="embedVideoP"><iframe class="latestVideoEmbed" vnum='0' cid="UCK08eZq3IsbAbzF0T6bs6xg" width="600" height="340" frameborder="0" allowfullscreen></iframe></p>
 </div>
 
-<!--<div class="pazdikan-videosTab pazdikan-tab">-->
-<!--    -->
-<!--</div>-->
 </body>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"
         crossorigin="anonymous"></script>
