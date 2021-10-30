@@ -1,33 +1,43 @@
-function changeTab(name) {
-    document.querySelectorAll(".pazdikan-active").forEach((e) => e.classList.remove("pazdikan-active") );
-    document.querySelector(`.pazdikan-${name}Tab`).classList.add("pazdikan-active");
-    window.document.title = "pazdikan.party › " + name + " page";
-}
-GitHubCalendar(".calendar", "pazdikan", { responsive: true, tooltips: true });
+const animateCSS = (element, animation, prefix = "animate__") =>
+  // We create a Promise and return it
+  new Promise((resolve, reject) => {
+    const animationName = `${prefix}${animation}`;
+    element.classList.add(`${prefix}animated`, animationName);
+    element.style.opacity = 1;
 
-$(document).ready(function () {
-    setTimeout(function () {
-        $('.load-delay').each(function () {
-            var imagex = $(this);
-            var imgOriginal = imagex.data('original');
-            $(imagex).attr('src', imgOriginal);
-        });
-    }, 1000);
+    // When the animation ends, we clean the classes and resolve the Promise
+    function handleAnimationEnd(event) {
+      event.stopPropagation();
+      //   element.classList.remove(`${prefix}animated`, animationName);
+      resolve("Animation ended");
+    }
+
+    element.addEventListener("animationend", handleAnimationEnd, {
+      once: true,
+    });
+  });
+
+setTimeout(function () {
+  document
+    .getElementsByClassName("shortabout")[0]
+    .classList.add("animate__animated", "animate__fadeIn");
+}, 1500);
+
+document.querySelectorAll(".about").forEach((element) => {
+  document.addEventListener("scroll", () => {
+    if (window.scrollY >= element.getBoundingClientRect().top) {
+      if (!element.classList.contains("animate__animated")) {
+        if (element.classList.contains("about-l"))
+          animateCSS(element, "bounceInLeft");
+        else if (element.classList.contains("about-r"))
+          animateCSS(element, "bounceInRight");
+      }
+    }
+  });
 });
 
-var reqURL = "https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent("https://www.youtube.com/feeds/videos.xml?channel_id=");
-function loadVideo(iframe) {
-    $.getJSON(reqURL + iframe.getAttribute('cid'),
-        function(data) {
-            var videoNumber = (iframe.getAttribute('vnum') ? Number(iframe.getAttribute('vnum')) : 0);
-            console.log(videoNumber);
-            var link = data.items[videoNumber].link;
-            id = link.substr(link.indexOf("=") + 1);
-            iframe.setAttribute("src", "https://youtube.com/embed/" + id + "?controls=0");
-        }
-    );
-}
-var iframes = document.getElementsByClassName('latestVideoEmbed');
-for (var i = 0, len = iframes.length; i < len; i++) {
-    loadVideo(iframes[i]);
-}
+Swal.fire(
+  "This website is WIP.",
+  "I have to do some changes, add stuff and fix the code in general.",
+  "warning"
+);

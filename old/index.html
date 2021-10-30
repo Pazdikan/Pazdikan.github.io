@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pazdikan.party">
+    <meta property="og:title" content="Pazdikan's website">
+    <meta property="og:description" content="About me and unnecessary things lmao.">
+    <meta property="og:image"
+          content="https://cdn.discordapp.com/icons/810605042481496105/b679012a817f5612f687a4b2f9987d1e.png">
+    <meta name="theme-color" content="#5e33ff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://cdn.discordapp.com/icons/810605042481496105/b679012a817f5612f687a4b2f9987d1e.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <script
+            src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js">
+    </script>
+    <link
+            rel="stylesheet"
+            href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"
+    />
+    <title>pazdikan.party › home page</title>
+<body>
+
+
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #5e33ff;">
+    <a class="navbar-brand" href="#" onclick="changeTab('home')">pazdikan.party <a class="titleHeart" onclick="alert('you found a secret lmao')">❤</a></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown active">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Socials</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="https://discord.gg/dXjUapMtsy" target="_blank">Discord</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="https://youtube.com/pazdikan" target="_blank">Youtube</a>
+                    <a class="dropdown-item" href="https://twitch.tv/pazdikan" target="_blank">Twitch</a>
+                    <a class="dropdown-item" href="https://twitter.com/pazdikan" target="_blank">Twitter</a>
+                    <a class="dropdown-item" href="https://github.com/pazdikan" target="_blank">Github</a>
+                </div>
+            <li class="nav-item active"><a class="nav-link" onclick="changeTab('activity')">Activity</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="pazdikan-homeTab pazdikan-tab pazdikan-active">
+    <div class="aboutme">
+        <p class="aboutme-text"><span class="aboutme-title">About me</span><br>
+            Hi there! I'm Michał, some random Polish kid :D. I love programming and learning new things.<br><br>
+            Some random facts about me: I'm shy, I'm sometimes (always) stupid, I started around 10000000000 projects and I'll never finish them lmao.
+        </p>
+    </div>
+    <div class="aboutme">
+        <p class="aboutme-text"><span class="aboutme-title">Skills</span><br>
+            These "things" cannot be called skills. I'm still learning a lot of stuff and I still don't know a lot of stuff.
+            Also I'm programming for myself so my code is ugly af.<br><br>
+            HTML/EJS/CSS -> for web dev lmao.<br>
+            Javascript -> for web dev and basic node.js apps.<br>
+            Typescript -> for node.js apps.<br>
+            Java -> for minecraft plugins (still learning).<br>
+            Python -> Umm, it's trash but I know it.
+        </p>
+    </div>
+    <div class="aboutme">
+        <p class="aboutme-text"><span class="aboutme-title">Current projects</span><br>
+            I'm working on a minecraft plugins/servers series (e.g. top, new, trending, news, how to configure them, etc.).
+            You can join my Discord server and give me some suggestions/ideas :D
+        </p>
+    </div>
+</div>
+
+<div class="pazdikan-activityTab pazdikan-tab">
+    <p class="activity-title">Github commits</p>
+    <div class="calendar"></div>
+    <p class="activity-title">Last played</p>
+    <p align="center"><a href="https://spotify-github-profile.vercel.app/api/view?uid=7u1ityx4k5dpz30f4mgaxnwnj&amp;redirect=true" class="spotify-text"><img class="load-delay spotify" src="https://c.tenor.com/I6kN-6X7nhAAAAAj/loading-buffering.gif" data-original="https://spotify-github-profile.vercel.app/api/view?uid=7u1ityx4k5dpz30f4mgaxnwnj&amp;cover_image=true&amp;theme=novatorem" /></a></p>
+    <p class="spotifyComment">green = playing now</p>
+    <p class="activity-title">Recent YouTube video</p>
+    <p align="center" class="embedVideoP"><iframe class="latestVideoEmbed" vnum='0' cid="UCK08eZq3IsbAbzF0T6bs6xg" width="600" height="340" frameborder="0" allowfullscreen></iframe></p>
+</div>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+<script src="index.js"></script>
+</html>
