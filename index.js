@@ -23,6 +23,12 @@ setTimeout(function () {
     .classList.add("animate__animated", "animate__fadeIn");
 }, 1500);
 
+setTimeout(function () {
+  document
+    .getElementsByClassName("socials")[0]
+    .classList.add("animate__animated", "animate__fadeIn");
+}, 1500);
+
 document.querySelectorAll(".about").forEach((element) => {
   document.addEventListener("scroll", () => {
     if (window.scrollY >= element.getBoundingClientRect().top) {
@@ -36,8 +42,8 @@ document.querySelectorAll(".about").forEach((element) => {
   });
 });
 
-Swal.fire(
-  "This website is WIP.",
-  "I have to do some changes, add stuff and fix the code in general.",
-  "warning"
-);
+// Swal.fire(
+//   "This website is WIP.",
+//   "I have to do some changes, add stuff and fix the code in general.",
+//   "warning"
+// );
