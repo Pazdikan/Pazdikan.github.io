@@ -13,6 +13,7 @@ body {
   font-weight: 500;
   text-align: center;
   overflow-x: hidden;
+  height: 3000px;
 }
 
 .content {
@@ -65,7 +66,7 @@ body {
   /* background-color: var(--color-primary); */
   border-radius: 10px;
   padding: 15px;
-  width: 500px;
+  width: 75%;
   margin: 0 auto;
   text-align: justify;
   margin-bottom: 100px;
@@ -83,6 +84,17 @@ body {
   opacity: 0;
   margin-right: 250px;
   margin-top: 50px;
+  text-align: right;
+}
+
+.about-description-l {
+  font-size: 13px;
+  text-align: left;
+}
+
+.about-description-r {
+  font-size: 13px;
+  text-align: right;
 }
 
 .fa-arrow-down {

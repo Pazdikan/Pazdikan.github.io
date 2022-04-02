@@ -42,8 +42,26 @@ document.querySelectorAll(".about").forEach((element) => {
   });
 });
 
-// Swal.fire(
-//   "This website is WIP.",
-//   "I have to do some changes, add stuff and fix the code in general.",
-//   "warning"
-// );
+tippy('.fa-java', {
+  content: 'Java',
+  theme: 'light-border',
+  animation: 'scale',
+});
+
+tippy('.fa-faucet', {
+  content: 'Spigot (Bukkit)',
+  theme: 'light-border',
+  animation: 'scale',
+});
+
+tippy('.mysql', {
+  content: 'MySQL',
+  theme: 'light-border',
+  animation: 'scale',
+});
+
+tippy('.fa-cube', {
+  content: 'My main Hypixel account stats.',
+  theme: 'light-border',
+  animation: 'scale',
+});
