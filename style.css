@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap");
+
+:root {
+  --color: aliceblue;
+}
+
+body {
+  font-family: "JetBrains Mono", monospace;
+
+  background: #0d0d0d;
+  color: var(--color);
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  width: 50%;
+  height: 50%;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+.links {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  width: fit-content;
+}
+
+.links li {
+  margin-right: 10px;
+}
+
+.links li:last-child {
+  margin-right: 0;
+}
+
+.links li a {
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+.links li a:hover {
+  background-color: #000;
+  color: var(--color);
+  border: 1px solid var(--color);
+  border-radius: 5px;
+}
+
+a:visited,
+a:active,
+a:link {
+  text-decoration: none;
+  color: var(--color);
+}
+
+.spotify {
+  padding-top: 50px;
+}
+
+.spotify-img {
+  width: 40%;
+}
+
+.tab {
+  padding-top: 25px;
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+table {
+  margin: 0 auto;
+}
+
+td {
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.keyboard {
+  margin-top: 25px;
+  width: 50%;
+}
