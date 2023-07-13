@@ -11,11 +11,14 @@ body {
   color: var(--color);
 }
 
+.logo {
+  width: 50%;
+}
+
 .container {
   text-align: center;
   padding: 20px;
   width: 50%;
-  height: 50%;
   border-radius: 10px;
   margin: 0 auto;
 }
@@ -84,4 +87,38 @@ td {
 .keyboard {
   margin-top: 25px;
   width: 50%;
+}
+
+@media only screen and (max-width: 600px) {
+  .logo {
+    width: 50%;
+  }
+
+  body {
+    height: 110vh;
+  }
+
+  .container {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    padding: 0;
+  }
+
+  .spotify-img {
+    width: 75%;
+  }
+
+  .keyboard {
+    width: 75%;
+  }
+
+  #socials {
+    font-size: 10px;
+  }
+
+  .links li a {
+    text-decoration: none;
+    padding: 2px 2px;
+  }
 }
